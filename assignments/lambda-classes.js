@@ -1,7 +1,7 @@
 // CODE here for your Lambda Classes
 class Person {
     constructor(personAtr) {
-        this.name = personAter.name;
+        this.name = personAtr.name;
         this.age = personAtr.age;
         this.location = personAtr.location;
         this.gender = personAtr.gender;
@@ -49,10 +49,32 @@ class Student extends Person {
     }
     listsSubjects() {
         studentAtr.favSubjects.forEach(function() {
-            console.log(studentAtr.favsubjects);
+            console.log(studentAtr.favSubjects);
         })
     }
     PRAssignment(subject) {
         return `${this.name} has begun the sprint challenge on ${subject}`;
     }
 }
+
+const logan = new Student({
+    name: "Logan",
+    age: 25,
+    location: "Idaho",
+    gender: "M",
+    previousBackground: "Some C++ college classes.",
+    className: "WEB17",
+    favSubjects: "Computer Science"
+});
+
+const mark = new Instructor({
+    name: "Mark",
+    age: 40,
+    location: "California",
+    gender: "M",
+    favLanguage: "Javascript"
+})
+
+console.log(logan.speak());
+console.log(logan.PRAssignment("Javascript"));
+console.log(mark.grade(logan, "Javascript"));
